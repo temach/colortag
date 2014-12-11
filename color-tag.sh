@@ -36,6 +36,8 @@ echo "Will change tag of ${filepath} to ${color}"
 
 
 
+
+
 # default variables
 progname="colortag"
 tmpformat="${progname}.tmpfile_XXXXXXXXXXXX"
@@ -102,6 +104,9 @@ then
 fi
 
 
+
+
+
 # Use the file preview and overlay it with color
 fileimg="${datadir}${extension}.png"
 fallbackimg="${datadir}txt.png"
@@ -126,6 +131,11 @@ fi
 # preview found
 echo "Will use $fileimg as file preview."
 
+
+
+
+
+
 # Overlay the preview image with color. The -blend affects transparency.
 composite -blend "20" "$colorimg" "$fileimg" "$resultpath"
 
@@ -134,9 +144,11 @@ convert "$resultpath" -level 50%,100% -sharpen 0x2.0 "$resultpath"
 
 if [ $? != 0 ]
 then
-    echo "Could not create a blended file."
+    echo "Could not create a resulting file icon."
     exit 1
 fi
+
+
 
 
 # change the preview image for the file
@@ -150,62 +162,6 @@ fi
 
 
 exit 0
-
-
-
-
-
-#case $color in
-#    [yp] )             # yellow purple
-#        statements ;;
-#    "g" | "o" )        # green orange 
-#        statements ;;
-#    "w" )              # white
-#        statements ;;
-#    ...
-#esac
-
-
-
-exit 0
-
-
-
-# Functions
-function checkReturnCode
-{
-    rc=$?
-    if [ $rc != 0 ]
-    then
-        exit $rc
-    fi
-}
-
-gvfs-set-attribute -t string /path/to/your/file metadata::custom-icon file:///path/to/your/icon.png
-if [ $? -ne 0]
-then
-    echo "Something went wrong"
-fi
-
-sleep 3
-xte "key F5"    # Force soft restart. Necessary to display changes immediately.
-if [ $? -ne 0]
-then
-    echo "Something went wrong"
-fi
-
-exit 0
-
-case expression in
-    pattern1 )
-        statements ;;
-    pattern2 )
-        statements ;;
-    ...
-esac
-
-
-
 
 
 
