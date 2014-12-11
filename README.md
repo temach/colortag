@@ -11,7 +11,7 @@ Requires:
 Works for nautilus. If other managers use gfvs then it might work for them too. 
 Creates a .colortag folder in your home. 
 
-Usage: `color-tag color <filepath>`
+Usage: `color-tag <color> <filepath>`
 
 __color__ can be anything in http://www.imagemagick.org/script/color.php
 
