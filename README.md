@@ -22,6 +22,7 @@ Remember to hit F5 key to refresh nautilus so it will display the changes.
 
 Usefull links:
 
+* http://rlog.rgtti.com/2010/11/28/adding-a-gnomenautilus-thumbnailer/
 * http://www.imagemagick.org/script/color.php
 * http://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local
 * http://askubuntu.com/questions/266322/what-additional-thumbnailers-are-available-and-how-do-i-install-them?rq=1
